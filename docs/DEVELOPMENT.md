@@ -10,8 +10,6 @@ The V1 baseline was cloned from commit `9f084ee`. The original XML files have no
 
 Manual testing confirmed EML, EMLX, and MBOX highlighting and automatic Light selection. Further Dark-theme and edge-case verification remains pending. Use `../samples/email-header-v2.eml` and `../samples/edge-cases.txt` in both palettes. Inspect no-space field values, punctuation-adjacent parameters, custom-X precedence, mixed case, folded lines, line-ending variations, and unmatched delimiters. Do not label the preview a validated release until those checks are complete.
 
-The historical [13Cubed Sublime syntax](https://github.com/13Cubed/EmailHeader/blob/master/EmailHeader.sublime-syntax) informed the comparison of line-start matching and IP highlighting. Its regex implementation has not been copied into this UDL.
-
 ## Findings from the definitions
 
 - Both variants claim `eml emlx mbox`, so automatic selection needs an explicit policy when both are installed.
