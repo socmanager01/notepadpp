@@ -41,19 +41,19 @@
       <WordsStyle name="LINE COMMENTS" fgColor="00FF00" bgcolor="" colorStyle="3" fontStyle="1" nesting="0" bgColor="202020" />
       <WordsStyle name="NUMBERS" fgColor="FFFFFF" bgcolor="" colorStyle="3" fontStyle="0" nesting="0" bgColor="202020" />
       <WordsStyle name="KEYWORDS1" fgColor="D90000" bgcolor="" colorStyle="3" fontStyle="1" nesting="0" bgColor="202020" />
-      <WordsStyle name="KEYWORDS2" fgColor="0000FF" bgcolor="" colorStyle="3" fontStyle="1" nesting="0" bgColor="202020" />
+      <WordsStyle name="KEYWORDS2" fgColor="508C9B" bgcolor="" colorStyle="3" fontStyle="1" nesting="0" bgColor="202020" />
       <WordsStyle name="KEYWORDS3" fgColor="D90000" bgcolor="" colorStyle="3" fontStyle="1" nesting="0" bgColor="202020" />
-      <WordsStyle name="KEYWORDS4" fgColor="0000FF" bgcolor="" colorStyle="3" fontStyle="1" nesting="0" bgColor="202020" />
+      <WordsStyle name="KEYWORDS4" fgColor="508C9B" bgcolor="" colorStyle="3" fontStyle="1" nesting="0" bgColor="202020" />
       <WordsStyle name="KEYWORDS5" fgColor="6F93D1" bgcolor="" colorStyle="3" fontStyle="1" nesting="0" bgColor="202020" />
       <WordsStyle name="KEYWORDS6" fgColor="00FF00" bgcolor="" colorStyle="3" fontStyle="1" nesting="0" bgColor="202020" />
-      <WordsStyle name="KEYWORDS7" fgColor="0000FF" bgcolor="" colorStyle="3" fontStyle="1" nesting="0" bgColor="202020" />
+      <WordsStyle name="KEYWORDS7" fgColor="508C9B" bgcolor="" colorStyle="3" fontStyle="1" nesting="0" bgColor="202020" />
       <WordsStyle name="KEYWORDS8" fgColor="FFFFFF" bgcolor="" colorStyle="3" fontStyle="0" nesting="0" bgColor="202020" />
       <WordsStyle name="OPERATORS" fgColor="FF8000" bgcolor="" colorStyle="3" fontStyle="1" nesting="0" bgColor="202020" />
       <WordsStyle name="FOLDER IN CODE1" fgColor="FFFFFF" bgcolor="" colorStyle="3" fontStyle="1" nesting="0" bgColor="202020" />
       <WordsStyle name="FOLDER IN CODE2" fgColor="FFFFFF" bgcolor="" colorStyle="3" fontStyle="1" nesting="0" bgColor="202020" />
       <WordsStyle name="FOLDER IN COMMENT" fgColor="FFFFFF" bgcolor="" colorStyle="3" fontStyle="1" nesting="0" bgColor="202020" />
       <WordsStyle name="DELIMITERS1" fgColor="6F93D1" bgcolor="" colorStyle="3" fontStyle="1" nesting="0" bgColor="202020" />
-      <WordsStyle name="DELIMITERS2" fgColor="800080" bgcolor="" colorStyle="3" fontStyle="1" nesting="0" bgColor="202020" />
+      <WordsStyle name="DELIMITERS2" fgColor="E3A5C7" bgcolor="" colorStyle="3" fontStyle="1" nesting="0" bgColor="202020" />
       <WordsStyle name="DELIMITERS3" fgColor="FFFFFF" bgcolor="" colorStyle="3" fontStyle="1" nesting="0" bgColor="202020" />
       <WordsStyle name="DELIMITERS4" fgColor="FFFFFF" bgcolor="" colorStyle="3" fontStyle="1" nesting="0" bgColor="202020" />
       <WordsStyle name="DELIMITERS5" fgColor="FFFFFF" bgcolor="" colorStyle="3" fontStyle="1" nesting="0" bgColor="202020" />

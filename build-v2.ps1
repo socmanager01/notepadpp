@@ -38,6 +38,11 @@ foreach ($variant in @('Light','Dark')) {
                 $style.SetAttribute($attribute, $original.GetAttribute($attribute))
             }
         }
+        # Apply the dark-palette readability feedback while retaining V1 emphasis.
+        if ($variant -eq 'Dark') {
+            if ($style.fgColor -eq '800080') { $style.SetAttribute('fgColor', 'E3A5C7') }
+            elseif ($style.fgColor -eq '0000FF') { $style.SetAttribute('fgColor', '508C9B') }
+        }
         # A palette must not inherit an incompatible editor background.
         $style.SetAttribute('bgColor', $(if ($variant -eq 'Light') {'FFFFFF'} else {'202020'}))
         $style.SetAttribute('colorStyle', '3')

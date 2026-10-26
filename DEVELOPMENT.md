@@ -19,7 +19,7 @@ The historical [13Cubed Sublime syntax](https://github.com/13Cubed/EmailHeader/b
 - `Resent-From:` appears twice in Keywords3.
 - Keywords4 through Keywords8 are unused. Potential additions should be grouped deliberately rather than appended without reviewing parsing precedence.
 - The current explicit authentication field list omits ARC fields. Review modern header coverage for V2.
-- The dark palette retains saturated blue (`0000FF`) for Keywords2 and purple (`800080`) for angle-bracketed text. Check readability against the target dark background in Notepad++.
+- Dark V2 applies the reported community suggestions: blue `0000FF` becomes `508C9B`, and purple `800080` becomes `E3A5C7`. Light remains unchanged. Dark-theme visual verification is still pending.
 - The `x-` rule is implemented using the line-comment configuration. Its placement, punctuation handling, and effect on later styles need visual checks.
 - Delimiter rules can span text that is not a header value. Check unmatched delimiters, folded headers, and the transition from headers to body.
 
