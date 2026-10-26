@@ -1,0 +1,47 @@
+Return-Path: <sender@example.org>
+Received: from relay.example.org (relay.example.org [192.0.2.10])
+ by mx.example.net with ESMTPS id sample; Sun, 25 Oct 2026 12:00:00 +0000
+Received: from host.example.org ([2001:db8::10])
+ by relay.example.org; Sun, 25 Oct 2026 11:59:00 +0000
+Authentication-Results: mx.example.net;
+ spf=pass smtp.mailfrom=example.org;
+ dkim=pass header.d=example.org header.s=sample;
+ dmarc=pass header.from=example.org
+ARC-Authentication-Results: i=1; relay.example.org; spf=pass
+ARC-Message-Signature: i=1; a=rsa-sha256; d=example.org; s=sample;
+ h=from:to:subject; bh=SYNTHETIC; b=SYNTHETIC
+ARC-Seal: i=1; a=rsa-sha256; d=example.org; s=sample; cv=none; b=SYNTHETIC
+DKIM-Signature: v=1; a=rsa-sha256; d=example.org; s=sample;
+ h=from:to:subject; bh=SYNTHETIC; b=SYNTHETIC
+fRoM: Example Sender <sender@example.org>
+To: Example Recipient <recipient@example.net>
+Reply-To: help@example.org
+Date: Sun, 25 Oct 2026 12:00:00 +0000
+Subject: =?UTF-8?Q?Synthetic_highlighting_example?=
+Message-ID: <sample-001@example.org>
+In-Reply-To: <sample-000@example.org>
+References: <sample-000@example.org>
+List-ID: Example list <list.example.org>
+List-Unsubscribe: <https://example.org/unsubscribe>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+X-Forefront-Antispam-Report: CIP:192.0.2.10;SCL:1;CAT:NONE;DIR:INB;
+X-Microsoft-Antispam: BCL:0;
+X-Custom-Example: arbitrary custom field
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="example-boundary"
+
+--example-boundary
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Synthetic content only. The signatures and recorded results above are fictional.
+Body text can also match UDL rules: From: example; spf=fail; 192.0.2.20.
+An inline x-custom: token should not trigger the column-one custom-field rule.
+
+--example-boundary
+Content-Type: text/plain; name="example.txt"
+Content-Disposition: attachment; filename="example.txt"
+Content-Transfer-Encoding: base64
+
+U3ludGhldGljIHNhbXBsZS4=
+--example-boundary--

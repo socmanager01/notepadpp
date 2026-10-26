@@ -1,0 +1,25 @@
+Synthetic lexer probes; this is not a valid complete email message.
+Select either V2 language manually.
+
+From: spaced field
+From:no-space@example.org
+fRoM: mixed case
+ Subject: folded continuation, not a new field
+Subject: =?UTF-8?Q?Encoded_subject?=
+X-Unknown-Vendor: custom field
+x-lowercase: custom field
+Text containing x-inline: must not start the custom-field rule
+Authentication-Results: example.net; spf=pass; dkim=fail; dmarc=temperror
+Authentication-Results: example.net; spf = pass; dkim = fail
+Content-Disposition: attachment; filename*=UTF-8''example.txt
+Content-Disposition: attachment; filename*0*=UTF-8''long; filename*1*=name.txt
+X-Forefront-Antispam-Report: CIP:192.0.2.10;SCL:5;CAT:SPM;
+X-Custom-Value: spf=pass (parenthesized text) <identifier@example.org>
+Received: from example.org ([2001:db8::10]) by example.net
+pass fail softfail neutral none temperror permerror policy
+
+Body-like text with From: and spf=pass may also be highlighted.
+Last probes deliberately contain unmatched delimiters to inspect style spill:
+Subject: unmatched (parenthesis
+Subject: unmatched <angle
+Subject: unmatched =?encoded-word
