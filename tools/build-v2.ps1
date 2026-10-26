@@ -1,4 +1,5 @@
 $ErrorActionPreference = 'Stop'
+$projectRoot = Split-Path -Parent $PSScriptRoot
 # Both variants are generated from the same rules; V1 remains the historical baseline.
 $groups = @(
     'Received: Return-Path: Delivered-To: X-Original-To: Envelope-To: Delivery-Date:',
@@ -12,7 +13,7 @@ $groups = @(
 )
 foreach ($variant in @('Light','Dark')) {
     $source = if ($variant -eq 'Light') { '01-npp-email-header-light-socmanager.com-v1.xml' } else { '02-npp-email-header-dark-socmanager.com-v1.xml' }
-    [xml]$doc = Get-Content -LiteralPath (Join-Path $PSScriptRoot $source) -Raw
+    [xml]$doc = Get-Content -LiteralPath (Join-Path (Join-Path $projectRoot 'v1') $source) -Raw
     $lang = $doc.NotepadPlus.UserLang
     $lang.SetAttribute('name', "Email Header $variant - SocManager.com - V2")
     # Light owns automatic associations; Dark remains manually selectable.
@@ -52,7 +53,7 @@ foreach ($variant in @('Light','Dark')) {
     $settings = New-Object System.Xml.XmlWriterSettings
     $settings.Encoding = New-Object System.Text.UTF8Encoding($false)
     $settings.Indent = $true
-    $path = Join-Path $PSScriptRoot "EmailHeader_SocManager_${variant}_v2.xml"
+    $path = Join-Path $projectRoot "EmailHeader_SocManager_${variant}_v2.xml"
     $writer = [System.Xml.XmlWriter]::Create($path, $settings)
     try { $doc.Save($writer) } finally { $writer.Dispose() }
 }

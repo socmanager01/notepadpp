@@ -21,14 +21,14 @@ Light V2 associates `eml emlx mbox` for automatic highlighting. Dark V2 has no e
 
 Parameter prefix matching colors a matching token and its attached value. Exact result words use a neutral color. Keywords are not restricted to the header section or column one. The generic `X-` rule is restricted to column one, but can take precedence over the more specific vendor field styling. Whitespace and punctuation can affect keyword recognition; short DKIM tags and precise IP recognition are deliberately not implemented. The [edge cases](samples/edge-cases.txt) include these limitations for visual review.
 
-Open the [synthetic message](samples/email-header-v2.eml) to evaluate both palettes. Its signatures and authentication assertions are fictional. See [coverage notes](COVERAGE.md) for planned versus implemented scope.
+Open the [synthetic message](samples/email-header-v2.eml) to evaluate both palettes. Its signatures and authentication assertions are fictional. See [coverage notes](docs/COVERAGE.md) for planned versus implemented scope.
 
 ### Original V1
 
 | Variant | XML definition | Language menu entry |
 | --- | --- | --- |
-| Light | [Download Light V1](https://raw.githubusercontent.com/socmanager01/notepadpp/master/01-npp-email-header-light-socmanager.com-v1.xml) | Email Header Light - SocManager.com - V1 |
-| Dark | [Download Dark V1](https://raw.githubusercontent.com/socmanager01/notepadpp/master/02-npp-email-header-dark-socmanager.com-v1.xml) | Email Header Dark - SocManager.com - V1 |
+| Light | [Download Light V1](https://raw.githubusercontent.com/socmanager01/notepadpp/master/v1/01-npp-email-header-light-socmanager.com-v1.xml) | Email Header Light - SocManager.com - V1 |
+| Dark | [Download Dark V1](https://raw.githubusercontent.com/socmanager01/notepadpp/master/v1/02-npp-email-header-dark-socmanager.com-v1.xml) | Email Header Dark - SocManager.com - V1 |
 
 Save the raw XML file, rather than a GitHub HTML page. Choose the variant that matches your editor background; selecting a UDL does not switch the Notepad++ application theme.
 
@@ -61,7 +61,7 @@ Repository: [socmanager01/notepadpp](https://github.com/socmanager01/notepadpp)
 
 Each XML file contains one `UserLang` definition using UDL format 2.1. The Light and Dark variants within each version share matching rules and differ in their styles. There is no accompanying auto-completion or Function List definition.
 
-Run `powershell -File .\build-v2.ps1` to regenerate V2 from the shared rules, and `powershell -File .\check-v2.ps1` to check XML, required coverage, duplicate keywords, rule parity, and matching-rule consistency. These checks do not execute the Notepad++ lexer.
+Run `powershell -File .\tools\build-v2.ps1` to regenerate V2 from the shared rules, and `powershell -File .\tools\check-v2.ps1` to check XML, required coverage, duplicate keywords, rule parity, and matching-rule consistency. These checks do not execute the Notepad++ lexer.
 
 For the official [Notepad++ UDL Collection](https://github.com/notepad-plus-plus/userDefinedLanguages), follow its [contribution instructions](https://github.com/notepad-plus-plus/userDefinedLanguages/blob/master/CONTRIBUTING.md): provide unique definition names, UTF-8 XML with an encoding declaration, and entries in `udl-list.json`. An illustrative sample is recommended. Collection inclusion and shipping a language preinstalled are separate integration decisions; this repository does not claim either has been accepted.
 
@@ -77,3 +77,11 @@ These tutorials accompany the original version. Use the V2 downloads and current
 ## Feedback
 
 Report highlighting problems through [GitHub Issues](https://github.com/socmanager01/notepadpp/issues). Include the variant and Notepad++ version, plus a small anonymized header example and the expected highlighting.
+
+## Repository layout
+
+- Root XML files: current V2 downloads.
+- `v1/`: original V1 definitions.
+- `samples/`: synthetic messages and edge cases.
+- `tools/`: optional maintenance scripts; not required for installation.
+- `docs/`: coverage and development notes.

@@ -1,7 +1,8 @@
 $ErrorActionPreference = 'Stop'
+$projectRoot = Split-Path -Parent $PSScriptRoot
 $definitions = @()
 foreach ($variant in @('Light','Dark')) {
-    $path = Join-Path $PSScriptRoot "EmailHeader_SocManager_${variant}_v2.xml"
+    $path = Join-Path $projectRoot "EmailHeader_SocManager_${variant}_v2.xml"
     $raw = Get-Content -LiteralPath $path -Raw
     if ($raw -notmatch '^<\?xml version="1.0" encoding="utf-8"\?>') { throw "Missing UTF-8 declaration: $path" }
     [xml]$doc = $raw
