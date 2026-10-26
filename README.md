@@ -67,7 +67,12 @@ For the official [Notepad++ UDL Collection](https://github.com/notepad-plus-plus
 
 ## Installation videos
 
-SocManager.com has published two historical installation tutorials. Their direct YouTube URLs still need to be confirmed before they are linked here.
+Historical installation tutorials from the [SOC Manager channel](https://www.youtube.com/@soc_manager):
+
+- [Notepad++ User Defined Language for Email Header Analysis - Light](https://www.youtube.com/watch?v=aU06EUxxREs)
+- [Notepad++ User Defined Language for Email Header Analysis - Dark Theme](https://www.youtube.com/watch?v=Lx61Eiiw7w0)
+
+These tutorials accompany the original version. Use the V2 downloads and current installation instructions above when installing the updated definitions.
 
 ## Feedback
 

@@ -30,7 +30,7 @@ Use synthetic data for mixed-case field names, adjacent field punctuation, folde
 ## Integration details to confirm
 
 - Confirm whether the maintainer requested a UDL Collection listing or inclusion in the application distribution. A README alone does not implement either route.
-- Confirm direct links for the two historical installation videos.
+- Historical Light/Dark installation video links are confirmed and included in the README.
 - Confirm the intended distribution license with the author before adding a license file.
 - Agree on V2 display names and extension association behavior before changing the definitions.
 
